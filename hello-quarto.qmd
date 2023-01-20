@@ -1,0 +1,31 @@
+---
+title: "Hello Quarto"
+author: "JJB + Course"
+format: html
+editor: "visual"
+---
+
+## Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. Quarto uses the **Markdown** syntax for authoring *HTML*, *PDF*, and *MS Word* documents. To learn more about Quarto see <https://quarto.org>.
+
+When you click the **Render** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+#| label: cars
+
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+#| label: pressure
+#| echo: false
+
+plot(pressure)
+```
+
+Note that the `echo: false` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
