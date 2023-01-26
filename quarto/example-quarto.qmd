@@ -1,0 +1,33 @@
+---
+title: "Example with Quarto"
+author: "JJB + Course"
+format: html
+editor: visual
+---
+
+Just start typing like normal!
+
+Let's make our text **bold**!
+
+-   Hello!
+
+-   Hola!
+
+-   Bonjour!
+
+```{r}
+1 + 1
+```
+
+```{r}
+x = 1:10 # giving us a sequence of 1, 2, ..., 9, 10
+print(x)
+
+x_mu = mean(x)
+x_median = median(x)
+x_sd = sd(x)
+
+print(x_mu)
+```
+
+We have the variable `x` with a mean of `r x_mu`.
