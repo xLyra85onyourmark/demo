@@ -12,3 +12,4 @@ The repository holds different code demos.
    - [html-document.html](quarto/html-document.html)
    - [word-document.docx](quarto/word-document.docx)
    - [word/](quarto/word/)
+   - [example-quarto.qmd](quarto/example-quarto.qmd)
