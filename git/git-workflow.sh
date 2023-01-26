@@ -7,7 +7,7 @@
 cd ~/Desktop
 
 # Clone Repository
-git clone https://github.com/<username>hello-world.git
+git clone https://github.com/<username>/hello-world.git
 # replace <username> with your github username (without <>)
 
 # Change into the new directory
@@ -39,37 +39,56 @@ git commit -m "Added a gitignore file for DS_STORE"
 git push
 
 # Create a branch
-git branch hello-world
+git branch hello-ex-branch
 
-# Note still on master
+# Note still on main (or master)
 git branch
 
 # Switch to the newly created branch
-git checkout hello-world
+git checkout hello-ex-branch
 
 # Verify branch switch
 git branch
 
 # Add a file
-touch hello_world.sh
-vi hello_world.sh
-chmod +x hello_world.sh 
-./hello-world.sh 
+touch say-hello-world.sh
+vi say-hello-world.sh
 
+# Within `vi`, please enter:
+#
+# #!/bin/bash
+#
+# echo "Hello bash world!"
+#
+# ---
+# You may close the connection by pressing ESC, then typing :wq
+
+# Next, we need to allow the file to execute
+chmod +x say-hello-world.sh 
+
+# Then, we'll run the file.
+./say-hello-world.sh
+
+# Let's see what git thinks about the file
 git status
-git add hello-world.sh 
+
+# Not tracked! Uh-oh.
+# We can add it to the repository using:
+git add say-hello-world.sh 
 git commit -m "Just print hello world"
+
+# What branch did we add the commit to?
 git branch
 
-# Switch to master
-git checkout master
+# Switch to main (may be master)
+git checkout main
 
-# Notice the hello_world.sh disappears
+# Notice the say-hello-world.sh disappears
 # Reappears back on other branch
-git checkout hello-world
+git checkout hello-ex-branch
 
-# Return to master
-git checkout master
+# Return to main (or master) branch
+git checkout main
 
 # Merge in changes
 git merge hello-world
